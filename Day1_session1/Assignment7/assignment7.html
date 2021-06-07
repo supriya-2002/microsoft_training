@@ -1,0 +1,21 @@
+<!--use script inside the body tag to display the current time on HTML page-->
+<doctpe>
+<html>
+<head>
+	<title>current date and time</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+		var myDate = new Date();
+		var hours = myDate.getHours();
+		var minutes = myDate.getMinutes();
+		minutes = minutes < 10 ? '0' + minutes : minutes;
+		var myTime = hours +" : " + minutes +" : " + myDate.getMilliseconds();
+		document.write("Current time is : " + myTime);
+	</script>
+	<script> 
+			document.write("Current date is:"+new Date().toLocaleDateString());
+	</script>	
+</body>
+</html>
