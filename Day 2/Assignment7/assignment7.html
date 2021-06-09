@@ -1,0 +1,35 @@
+<!--Create a button,when you click on the button some portion of the paragraph should be updated..-->
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Change text on click</title>
+		<style>
+		.change
+		{
+			color:blue;
+			font-size: 100%;
+			background-color:pink;
+		}
+		body
+		{
+			background-color:yellow;
+			font-size:200%;
+		}
+	</style>
+	</head>
+	<body>
+		<h1 style="color:green;text-align: center;">NATURE</h1>
+		<p>
+			Nature is what we see around us all the time, <span style="color:red;font-size:36px">the green trees and plants, the blue sky with the white clouds, the dark soil, the river, or the pond, and the animals</span>together make up nature.<span id="a1" class="change">Nature plays an enormous and inevitable role in our life.</span>Nature is our provider; it gives us almost all the basic things we need. Everything that we use has its roots in nature.
+		</p>
+		<button type="button" onclick = "changetext()">Change Text</button>
+		<script>
+			function changetext()
+			{
+				document.getElementById('a1').innerHTML = "Look deep into the nature you understand everything better";
+			}	
+		</script>
+	</body>
+	</html>
