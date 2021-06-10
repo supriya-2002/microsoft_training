@@ -1,0 +1,31 @@
+<!-- Data List Demo -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Data List</title>
+		<style>
+			p {
+				color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<label>Enter your favourite Tv channel:</label> <br/>
+		<input type="text" id="fav" list="tv">
+		<datalist id="tv">
+			<option value="STAR MAA" />
+			<option value="ZEE TELUGU" />
+			<option value="GEMINI TV" />
+			<option value="E TV" />
+		</datalist> <br/><br/>
+		<button onclick="readData()">Submit</button>
+		<p id="result"></p>
+		<script>
+			function readData() {
+				var fav = document.getElementById('fav').value;
+				document.getElementById('result').innerHTML="Favourite channel:: " + fav;
+			}
+		</script>
+	</body>
+</html>

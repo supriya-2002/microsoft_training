@@ -1,0 +1,106 @@
+<!-- Create an input that reads from radio,checkbox which dispalys the selected data in separate paragraphs..-->
+
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Radio button</title>
+	</head>
+
+	<body>
+		<p style="color:red;font-size:30px;">
+				Radio button
+		</p>
+			<h2>Select your Dream</h2>
+		
+			<input type="radio" name="Dream" value="Engineer">Engineer
+			<input type="radio" name="Dream" value="Doctor">Doctor
+			<input type="radio" name="Dream" value="Politician">Politician
+	
+			<br>
+			<br>
+	
+			<button type="button" onclick="getdreamvalue()"> Submit
+			</button>
+	
+			<br>
+			<br>
+		
+			<div id="result1"></div>
+
+	
+			<script>
+				function getdreamvalue() 
+				{
+					var ele = document.getElementsByName('Dream');
+			
+					for(i = 0; i < ele.length; i++) 
+					{
+					if(ele[i].checked)
+					document.getElementById("result1").innerHTML
+						= " Selected Dream: "+ele[i].value;
+					}
+				}
+			</script>
+			<p style="color:red;font-size: 30px;">
+				Check button
+
+			</p>
+			<h3>Your Favourite Actor:</h3>
+			<input type="checkbox" id="Prabhas" value="Prabhas" />Prabhas
+			<input type="checkbox" id="Hrithik" value="Hrithik" />Hrithik 
+			<input type="checkbox" id="Ranveer" value="Ranveer" />Ranveer 
+			<br/><br/>
+			<button onclick="readData()">Submit</button>
+			<p id="result2"></p>
+
+			<script>
+				function readData() 
+				{
+					var a=document.getElementById('Prabhas');
+					var b=document.getElementById('Hrithik');
+					var c=document.getElementById('Ranveer');
+					var res;
+
+					console.log(a.checked,b.checked,c.checked);
+
+					if(a == true && b.checked == true && c.checked==true) 
+					{
+						res='Prabhas,Hrithik and Ranveer';
+					}
+					else if(a.checked == false && b.checked == true && c.checked== true)
+					{
+						res='Hrithik and Ranveer';
+					} 
+					else if(a.checked == true && b.checked == false && c.checked==true)
+					{
+						res='Prabhas and Ranveer';
+					} 
+					else if(a.checked == true && b.checked == true && c.checked==false)
+					{
+						res='Prabhas and Hrithik';
+					} 
+					else if(a.checked == true && b.checked == false && c.checked==false)
+					{
+						res='Prabhas only';
+					} else if(a.checked == false && b.checked == true && c.checked==false)
+					{
+						res='Hrithik only';
+					} else if(a.checked == false && b.checked == false && c.checked==true)
+					{
+						res='Ranveer only';
+					} 
+
+					else 
+					{
+						res = 'None';
+					}
+
+					document.getElementById('result2').innerHTML="Selected actor/actors are:    "+res;
+
+			}
+		</script>
+
+		</body>
+</html>					
