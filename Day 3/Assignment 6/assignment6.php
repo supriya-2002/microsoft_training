@@ -18,10 +18,14 @@ $result=mysqli_query($mysqli,"SELECT* from DaataValue");
 		
 	</form>
 	<table border="2">
+		<tr>
+			<th>NAME</th>
+			<th>Aadhaar</th>
+			<th>Adress</th>
+		</tr>
 		
 		
 		<?php
-		echo "hai";
 		while($res=mysqli_fetch_array($result))
 		{
 			echo '<tr>';

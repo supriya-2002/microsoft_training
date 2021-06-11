@@ -1,0 +1,22 @@
+<!--Write your name on Canvas using HTML and JavaScript...-->
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Canvas</title>
+	</head>
+	<body>
+
+		<canvas id="c1" width="500" height="500" style="border:2px solid red;"></canvas>
+		<script>
+			var canvas = document.getElementById("c1");
+			var c=canvas.getContext("2d");
+			c.font="30px Comic Sans MS";
+			c.fillStyle = "blue";
+			c.textAlign = "center";
+			c.fillText("PHANI SUPRIYA", canvas.width/2, canvas.height/2);
+		</script>
+
+	</body>
+</html>
